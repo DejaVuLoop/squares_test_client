@@ -66,3 +66,14 @@ func new_match():
 
 	set_body_of_result_to(result, "match");
 	return result;
+
+func join_match(match_id: String) -> RequestResult:
+	var result : RequestResult = yield(rc.submit_request({
+		"operation" : "/matches/" + match_id + "/players",
+		"method" : HTTPClient.METHOD_POST,
+		"custom_headers" : generate_headers_with_auth()
+	}), "completed");
+
+	print(result.to_string());
+	#set_body_of_result_to(result, "match");
+	return result;

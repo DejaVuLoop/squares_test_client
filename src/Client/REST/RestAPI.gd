@@ -89,5 +89,8 @@ func test_run():
 			printerr("Issue finding players from the match. Error code: " + str(players_result.code));
 	print(" ");
 	
+	print("joining match");
+	$Matches.join_match(random_match_result.body.id);
+	
 func _ready():
 	test_run();
