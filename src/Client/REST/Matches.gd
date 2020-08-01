@@ -18,7 +18,7 @@ func generate_headers_with_auth():
 	return ["Content-Type: application/json", "Authorization: " + authorization_token];
 
 func get_matches() -> RequestResult:
-	var result:RequestResult = yield(rc.submit_request({
+	var result : RequestResult = yield(rc.submit_request({
 		"operation" : "/matches",
 		"method" : HTTPClient.METHOD_GET,
 		"custom_headers" : generate_headers_with_auth()
@@ -28,7 +28,7 @@ func get_matches() -> RequestResult:
 	return result;
 
 func get_match(match_id: String) -> RequestResult:
-	var result:RequestResult = yield(rc.submit_request({
+	var result : RequestResult = yield(rc.submit_request({
 		"operation" : "/matches/"+ match_id,
 		"method" : HTTPClient.METHOD_GET,
 		"custom_headers" : generate_headers_with_auth()
@@ -38,7 +38,7 @@ func get_match(match_id: String) -> RequestResult:
 	return result;
 
 func get_random_match() -> RequestResult:
-	var result:RequestResult = yield(rc.submit_request({
+	var result : RequestResult = yield(rc.submit_request({
 		"operation" : "/matches/@random",
 		"method" : HTTPClient.METHOD_GET,
 		"custom_headers" : generate_headers_with_auth()
@@ -47,8 +47,8 @@ func get_random_match() -> RequestResult:
 	set_body_of_result_to(result, "match");
 	return result;
 
-func get_players(match_id) -> RequestResult:
-	var result:RequestResult = yield(rc.submit_request({
+func get_players(match_id: String) -> RequestResult:
+	var result : RequestResult = yield(rc.submit_request({
 		"operation" : "/matches/"+ match_id + "/players",
 		"method" : HTTPClient.METHOD_GET,
 		"custom_headers" : generate_headers_with_auth()
@@ -58,7 +58,7 @@ func get_players(match_id) -> RequestResult:
 	return result;
 
 func new_match():
-	var result:RequestResult = yield(rc.submit_request({
+	var result : RequestResult = yield(rc.submit_request({
 		"operation" : "/matches",
 		"method" : HTTPClient.METHOD_PUT,
 		"custom_headers" : generate_headers_with_auth()
