@@ -1,5 +1,5 @@
 extends Node;
-
+#test
 export var base_url : String = "127.0.0.1";
 var rest_url : String = "http://" + base_url + ":8865";
 var logged_in: bool = false;

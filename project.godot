@@ -12,12 +12,12 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "RequestListener",
 "language": "GDScript",
-"path": "res://RequestListener.gd"
+"path": "res://src/Client/REST/RequestListener.gd"
 }, {
 "base": "Resource",
 "class": "RequestResult",
 "language": "GDScript",
-"path": "res://RequestResult.gd"
+"path": "res://src/Client/REST/RequestResult.gd"
 } ]
 _global_script_class_icons={
 "RequestListener": "",

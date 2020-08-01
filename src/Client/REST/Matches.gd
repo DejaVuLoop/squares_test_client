@@ -3,6 +3,7 @@ extends Node;
 var rc;
 var authorization_token = "";
 
+
 func _ready():
 	rc = get_parent().get_node("RestCommunicator");
 
