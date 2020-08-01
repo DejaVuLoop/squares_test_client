@@ -1,0 +1,1 @@
+squares_test_client
