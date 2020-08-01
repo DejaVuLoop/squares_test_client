@@ -1,0 +1,35 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "RequestListener",
+"language": "GDScript",
+"path": "res://RequestListener.gd"
+}, {
+"base": "Resource",
+"class": "RequestResult",
+"language": "GDScript",
+"path": "res://RequestResult.gd"
+} ]
+_global_script_class_icons={
+"RequestListener": "",
+"RequestResult": ""
+}
+
+[application]
+
+config/name="Websockets"
+run/main_scene="res://RestMain.tscn"
+config/icon="res://icon.png"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
