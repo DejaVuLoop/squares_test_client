@@ -9,12 +9,12 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Reference",
+"base": "Node",
 "class": "RequestListener",
 "language": "GDScript",
 "path": "res://src/Client/REST/RequestListener.gd"
 }, {
-"base": "Reference",
+"base": "Resource",
 "class": "RequestResult",
 "language": "GDScript",
 "path": "res://src/Client/REST/RequestResult.gd"

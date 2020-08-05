@@ -1,8 +1,8 @@
 extends Node;
 
-var base_rest_url: String
+var base_rest_url: String;
 
-var default_headers: PoolStringArray = ["Content-Type: application/json"]
+var default_headers: PoolStringArray = ["Content-Type: application/json"];
 var default_ssl_validate: bool = false;
 var default_request_data: String = "";
 
@@ -28,7 +28,7 @@ func submit_request(request_data: Dictionary):
 	add_child(http_request);
 	add_child(listener);
 	
-	http_request.connect("request_completed", listener, "_http_request_completed")
+	http_request.connect("request_completed", listener, "_http_request_completed");
 	
 	var error = http_request.request(
 		base_rest_url + request_data["operation"],
@@ -39,6 +39,6 @@ func submit_request(request_data: Dictionary):
 	);
 
 	if error != OK:
-		push_error("An error occurred in the HTTP request.")
+		push_error("An error occurred in the HTTP request.");
 	
 	return yield(listener, "received_result");
