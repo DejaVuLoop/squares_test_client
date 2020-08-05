@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://src/Client/REST/RestAPI.gd" type="Script" id=1]
-[ext_resource path="res://src/Client/REST/RestCommunicator.gd" type="Script" id=2]
+[ext_resource path="res://RestAPI.gd" type="Script" id=1]
+[ext_resource path="res://RestCommunicator.gd" type="Script" id=2]
 [ext_resource path="res://src/Client/REST/Matches.gd" type="Script" id=3]
 
 [node name="RestAPI" type="Node"]
