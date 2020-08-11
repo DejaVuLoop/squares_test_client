@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Websockets"
-run/main_scene="res://RestMain.tscn"
+run/main_scene="res://Client.tscn"
 config/icon="res://icon.png"
 
 [rendering]

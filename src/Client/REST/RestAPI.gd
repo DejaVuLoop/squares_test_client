@@ -1,8 +1,9 @@
 extends Node;
 
-export var base_url : String = "127.0.0.1";
-var rest_url : String = "http://" + base_url + ":8865";
 var logged_in: bool = false;
+
+func init(ip : String):
+	$RestCommmunicator.init(ip);
 
 func login() -> Dictionary:
 	var login_result: RequestResult = yield(
@@ -13,7 +14,6 @@ func login() -> Dictionary:
 	
 	var token: String = "";
 	var id = 0;
-	
 	match (login_result.code):
 		200:
 			token = login_result.body["token"];
